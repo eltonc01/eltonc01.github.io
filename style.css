@@ -1,0 +1,66 @@
+:root {
+  --bg: #fdfdfc;
+  --text: #222;
+  --muted: #666;
+  --link: #1a5fb4;
+  --rule: #e4e4e0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161616;
+    --text: #e6e6e6;
+    --muted: #9a9a9a;
+    --link: #78aeff;
+    --rule: #333;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 Georgia, "Times New Roman", serif;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 56px 20px 80px;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1 { font-size: 2.1rem; font-weight: normal; margin: 0 0 6px; }
+h2 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin: 40px 0 14px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--rule);
+}
+
+header { margin-bottom: 32px; }
+.subtitle { margin: 0 0 8px; color: var(--muted); }
+.contact { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+ul { list-style: none; padding: 0; margin: 0; }
+
+.pubs li { margin-bottom: 18px; }
+.pubs span { display: block; }
+.pubs .title { font-weight: bold; }
+.pubs .authors, .pubs .venue, .pubs .links { font-size: 0.95rem; }
+.pubs .venue { color: var(--muted); }
+
+.exp li { display: flex; gap: 16px; margin-bottom: 6px; }
+.exp .when { width: 70px; flex-shrink: 0; color: var(--muted); }
+
+.plain li::before { content: "• "; color: var(--muted); }
+
+footer {
+  margin-top: 48px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
